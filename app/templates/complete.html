@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="card">
+    <h1>{{ study_title }}</h1>
+    <div class="question-html">{{ body_html | safe }}</div>
+    <div class="meta">
+      <div><strong>PROLIFIC_PID</strong>: {{ participant.prolific_pid or "missing" }}</div>
+      <div><strong>Completion code</strong>: {{ completion_code }}</div>
+    </div>
+    <div class="actions">
+      {% if prolific_return_url %}
+        <a class="button" href="{{ complete_url }}">Return to Prolific</a>
+      {% endif %}
+      <a class="button secondary" href="{{ url_for('main.index') }}">Restart study</a>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="card">
+    <h1>{{ study_title }}</h1>
+    <form method="post" class="stack">
+      <div class="question-html">{{ item.html | safe }}</div>
+      <div class="choice-list">
+        {% for choice in item.choices %}
+          <label class="choice-row">
+            <input type="radio" name="{{ item.field_name }}" value="{{ choice.value }}" required>
+            <span>{{ choice.display | safe }}</span>
+          </label>
+        {% endfor %}
+      </div>
+
+      {% if error %}
+        <p class="error">{{ error }}</p>
+      {% endif %}
+
+      <div class="actions">
+        <button class="button" type="submit">Continue</button>
+      </div>
+    </form>
+  </section>
+{% endblock %}

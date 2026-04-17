@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="card">
+    <h1>{{ study_title }}</h1>
+    <div class="question-html">{{ consent.html | safe }}</div>
+    {% if error %}
+      <p class="error">{{ error }}</p>
+    {% endif %}
+    <form method="post" class="stack narrow-form">
+      <label class="field-label" for="consent-text">Consent entry</label>
+      <input
+        id="consent-text"
+        class="text-input"
+        name="{{ consent.field_name }}"
+        type="text"
+        autocomplete="off"
+        required
+      >
+      <div class="actions">
+        <button class="button" type="submit">Continue</button>
+      </div>
+    </form>
+  </section>
+{% endblock %}
