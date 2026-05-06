@@ -1,0 +1,9 @@
+.git/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+tests/_tmp/
+tmp/
+data/raw/*.csv
+data/raw/*.jsonl

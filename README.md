@@ -41,3 +41,19 @@ The included `render.yaml` is set up for a free Render deployment. If you want t
 - `SECRET_KEY`
 - `COMPLETION_CODE`
 - `PROLIFIC_RETURN_URL`
+
+## RUB Server Deployment
+
+This app can also run on the central SOCO server via Docker Compose.
+
+Expected server path:
+
+`/srv/soco-studies/apps/study-qsf-reproduction`
+
+Expected public path:
+
+`https://soco.vm.ruhr-uni-bochum.de/qsf-demo`
+
+Server data path:
+
+`/srv/soco-studies/data/qsf-demo`
