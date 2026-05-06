@@ -9,4 +9,5 @@ class Config:
     EXPORT_DATA_DIR = Path(os.environ.get("EXPORT_DATA_DIR", BASE_DIR / "data" / "exports"))
     COMPLETION_CODE = os.environ.get("COMPLETION_CODE", "")
     PROLIFIC_RETURN_URL = os.environ.get("PROLIFIC_RETURN_URL", "")
+    URL_PREFIX = os.environ.get("URL_PREFIX", "")
     DEBUG = os.environ.get("FLASK_DEBUG", "0") == "1"

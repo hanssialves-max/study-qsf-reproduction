@@ -5,6 +5,7 @@ services:
     restart: unless-stopped
     environment:
       SECRET_KEY: ${SECRET_KEY:-change-this-before-production}
+      URL_PREFIX: /qsf-demo
       RAW_DATA_DIR: /data/raw
       EXPORT_DATA_DIR: /data/exports
     volumes:
