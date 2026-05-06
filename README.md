@@ -34,6 +34,14 @@ Local pilot data is written to:
 - `data/raw/participants.csv`
 - `data/raw/response_events.jsonl`
 
+`participants.csv` is only a completion summary. To create a wide response table with all variables as columns, run:
+
+`python export_responses.py`
+
+On the RUB server, run:
+
+`docker compose exec qsf-study python export_responses.py --raw-dir /data/raw --output /data/exports/responses_wide.csv`
+
 ## Render
 
 The included `render.yaml` is set up for a free Render deployment. If you want to override the Prolific completion settings, set:
